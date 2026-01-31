@@ -28,10 +28,10 @@ pipeline {
         
         stage('Run Tests') {
             steps {
-                echo 'Running unit tests from test_main.py...'
+                echo 'Running unit tests...'
                 sh '''
                     . venv/bin/activate
-                    pytest test_main.py -v
+                    pytest test_*.py -v
                 '''
             }
         }
